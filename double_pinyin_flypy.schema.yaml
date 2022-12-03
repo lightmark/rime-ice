@@ -129,39 +129,39 @@ translator:
   prism: double_pinyin_flypy    # 多方案共用一个词库时，为避免冲突，需要用 prism 指定一个名字。
   contextual_suggestions: true  # 开启八股文
   initial_quality: 1.2          # 拼音的权重应该比英文大
-  preedit_format:               # preedit_format 影响到输入框的显示和“Shift+回车”上屏的字符
-    - xform/([bpmfdtnljqx])n/$1iao/
-    - xform/(\w)g/$1eng/
-    - xform/(\w)q/$1iu/
-    - xform/(\w)w/$1ei/
-    - xform/([dtnlgkhjqxyvuirzcs])r/$1uan/
-    - xform/(\w)t/$1ve/
-    - xform/(\w)y/$1un/
-    - xform/([dtnlgkhvuirzcs])o/$1uo/
-    - xform/(\w)p/$1ie/
-    - xform/([jqx])s/$1iong/
-    - xform/(\w)s/$1ong/
-    - xform/(\w)d/$1ai/
-    - xform/(\w)f/$1en/
-    - xform/(\w)h/$1ang/
-    - xform/(\w)j/$1an/
-    - xform/([gkhvuirzcs])k/$1uai/
-    - xform/(\w)k/$1ing/
-    - xform/([jqxnl])l/$1iang/
-    - xform/(\w)l/$1uang/
-    - xform/(\w)z/$1ou/
-    - xform/([gkhvuirzcs])x/$1ua/
-    - xform/(\w)x/$1ia/
-    - xform/(\w)c/$1ao/
-    - xform/([dtgkhvuirzcs])v/$1ui/
-    - xform/(\w)b/$1in/
-    - xform/(\w)m/$1ian/
-    - xform/([aoe])\1(\w)/$1$2/
-    - "xform/(^|[ '])v/$1zh/"
-    - "xform/(^|[ '])i/$1ch/"
-    - "xform/(^|[ '])u/$1sh/"
-    - xform/([jqxy])v/$1u/
-    - xform/([nl])v/$1ü/
+  #preedit_format:               # preedit_format 影响到输入框的显示和“Shift+回车”上屏的字符
+  #  - xform/([bpmfdtnljqx])n/$1iao/
+  #  - xform/(\w)g/$1eng/
+  #  - xform/(\w)q/$1iu/
+  #  - xform/(\w)w/$1ei/
+  #  - xform/([dtnlgkhjqxyvuirzcs])r/$1uan/
+  #  - xform/(\w)t/$1ve/
+  #  - xform/(\w)y/$1un/
+  #  - xform/([dtnlgkhvuirzcs])o/$1uo/
+  #  - xform/(\w)p/$1ie/
+  #  - xform/([jqx])s/$1iong/
+  #  - xform/(\w)s/$1ong/
+  #  - xform/(\w)d/$1ai/
+  #  - xform/(\w)f/$1en/
+  #  - xform/(\w)h/$1ang/
+  #  - xform/(\w)j/$1an/
+  #  - xform/([gkhvuirzcs])k/$1uai/
+  #  - xform/(\w)k/$1ing/
+  #  - xform/([jqxnl])l/$1iang/
+  #  - xform/(\w)l/$1uang/
+  #  - xform/(\w)z/$1ou/
+  #  - xform/([gkhvuirzcs])x/$1ua/
+  #  - xform/(\w)x/$1ia/
+  #  - xform/(\w)c/$1ao/
+  #  - xform/([dtgkhvuirzcs])v/$1ui/
+  #  - xform/(\w)b/$1in/
+  #  - xform/(\w)m/$1ian/
+  #  - xform/([aoe])\1(\w)/$1$2/
+  #  - "xform/(^|[ '])v/$1zh/"
+  #  - "xform/(^|[ '])i/$1ch/"
+  #  - "xform/(^|[ '])u/$1sh/"
+  #  - xform/([jqxy])v/$1u/
+  #  - xform/([nl])v/$1ü/
 
 
 # 英文
@@ -190,7 +190,7 @@ recognizer:
     email: "^[A-Za-z][-_.0-9A-Za-z]*@.*$"                            # 自带的，e-mail 正则
     # uppercase: "[A-Z][-_+.'0-9A-Za-z]*$"                           # 自带的，大写字母开头后，可以输入[-_+.'0-9A-Za-z]这些字符
     url: "^(www[.]|https?:|ftp[.:]|mailto:|file:).*$|^[a-z]+[.].+$"  # 自带的，URL 正则
-    url_2: "^[A-Za-z]+[.].*"             # 支持 google.com abc.txt 等网址或文件名，会导致句号不会让句子上屏，或使用句号翻页时需要注释掉
+    # url_2: "^[A-Za-z]+[.].*"             # 支持 google.com abc.txt 等网址或文件名，会导致句号不会让句子上屏，或使用句号翻页时需要注释掉
     win_path: "^[A-Za-z]:.*"             # 支持 c:\file\path 之类的路径输入
     colon: "^[A-Za-z]+:.*"               # 上面的超集，可以输入冒号，不会导致句子直接上屏
     # punct: "^/([0-9]+[a-z]*|[a-z]+)$"  # 响应默认的 punctuation/symbols 的「/」开头的字符
